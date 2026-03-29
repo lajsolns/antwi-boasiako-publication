@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function YouMayAlsoLike({ currentBookId, books }) {
+  const { t } = useLanguage();
+
   // Filter out the current book and get 3 related books
   const relatedBooks = books
     .filter(book => book.id !== currentBookId)
@@ -14,14 +17,14 @@ export default function YouMayAlsoLike({ currentBookId, books }) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block font-inter text-xs tracking-[0.2em] text-gray-500 uppercase">
-            Discover
+            {t('youMayAlsoLike.discover')}
           </span>
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-6 tracking-tight">
-            You may also like
+            {t('youMayAlsoLike.title')}
           </h2>
           <div className="w-16 h-[1px] bg-gray-300 mx-auto mt-6 mb-8"></div>
           <p className="font-inter text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
-            Explore more publications from Dr. Antwi-Boasiako
+            {t('youMayAlsoLike.exploreMore')}
           </p>
         </div>
 
@@ -74,7 +77,7 @@ export default function YouMayAlsoLike({ currentBookId, books }) {
                 {/* View Details Link (Animated Underline) */}
                 <div className="overflow-hidden inline-block relative">
                   <span className="font-inter text-xs tracking-[0.2em] uppercase text-gray-900">
-                    View Details
+                    {t('common.viewDetails')}
                   </span>
                   <span className="absolute bottom-0 left-0 w-full h-[1px] bg-amber-800 transform -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
                 </div>

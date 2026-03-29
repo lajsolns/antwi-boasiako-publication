@@ -7,8 +7,10 @@ import { FiCalendar, FiMapPin, FiClock, FiUsers, FiDownload, FiPlay, FiFileText,
 import PublicationsHeader from '@/components/PublicationsHeader';
 import PublicationsFooter from '@/components/PublicationsFooter';
 import ImageGalleryModal from '@/components/ImageGalleryModal';
+import { useLanguage } from '@/context/LanguageContext';
 
 function VideoPlayer({ video }) {
+  const { t } = useLanguage();
   const [playing, setPlaying] = useState(false);
   return (
     <div className="relative aspect-video bg-gray-900 overflow-hidden border border-gray-200">
@@ -24,7 +26,7 @@ function VideoPlayer({ video }) {
           {video.thumbnail ? (
             <Image
               src={video.thumbnail}
-              alt={video.title}
+              alt={video.titleKey ? t(video.titleKey) : 'Video thumbnail'}
               fill
               className="object-cover"
             />
@@ -49,6 +51,7 @@ function VideoPlayer({ video }) {
 
 export default function EventDetailPage({ params }) {
   const resolvedParams = use(params);
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -58,49 +61,49 @@ export default function EventDetailPage({ params }) {
 
   const event1 = {
     id: 1,
-    title: "Book Launch: The Republic",
-    subtitle: "A Professional Journey, Ghana's Cybersecurity & the Making of a Role Model Country",
-    description: "Join Dr. Antwi-Boasiako for the official launch of his latest book 'The Republic'. This landmark publication explores Ghana's cybersecurity evolution and the nation's journey toward becoming a global cybersecurity role model.",
-    longDescription: "The Republic Book Launch celebrates the release of Dr. Antwi-Boasiako's seminal work on Ghana's cybersecurity journey. This exclusive event features readings from the book, insightful discussions on the themes explored, and opportunities for attendees to engage with the author. The publication represents a comprehensive analysis of Ghana's transformation into a cybersecurity leader in Africa, making this launch a significant moment in the nation's technological and literary landscape.",
+    titleKey: 'eventsData.event1.title',
+    subtitleKey: 'eventsData.event1.subtitle',
+    descriptionKey: 'eventsData.event1.description',
+    longDescriptionKey: 'eventsData.event1.longDescription',
     date: "November 25, 2025",
     time: "05:00 PM",
     endDate: "2025-11-25",
     endTime: "08:00 PM",
-    location: "British Council, Liberia Road, Accra",
-    address: "Liberia Road, Accra, Ghana",
+    locationKey: 'eventsData.event1.location',
+    addressKey: 'eventsData.event1.address',
     type: "past",
     category: "launch",
     image: "/image/events/book_launch_original.jpeg",
     attendees: 200,
-    speaker: "Dr. Antwi-Boasiako",
+    speakerKey: 'eventsData.event1.speaker',
     registrationLink: "#register",
     agenda: [
-      { time: "05:00 PM", title: "Guest Arrival & Welcome Reception", duration: "30 min" },
-      { time: "05:30 PM", title: "Opening Remarks", duration: "10 min" },
-      { time: "05:40 PM", title: "Author Introduction", duration: "15 min" },
-      { time: "05:55 PM", title: "Book Reading - Selected Chapters", duration: "25 min" },
-      { time: "06:20 PM", title: "Q&A Session with Author", duration: "30 min" },
-      { time: "06:50 PM", title: "Literary Discussion", duration: "20 min" },
-      { time: "07:10 PM", title: "Book Signing Session", duration: "40 min" },
-      { time: "07:50 PM", title: "Networking & Refreshments", duration: "40 min" }
+      { time: "05:00 PM", titleKey: 'eventsData.event1.agenda[0].title', duration: "30 min" },
+      { time: "05:30 PM", titleKey: 'eventsData.event1.agenda[1].title', duration: "10 min" },
+      { time: "05:40 PM", titleKey: 'eventsData.event1.agenda[2].title', duration: "15 min" },
+      { time: "05:55 PM", titleKey: 'eventsData.event1.agenda[3].title', duration: "25 min" },
+      { time: "06:20 PM", titleKey: 'eventsData.event1.agenda[4].title', duration: "30 min" },
+      { time: "06:50 PM", titleKey: 'eventsData.event1.agenda[5].title', duration: "20 min" },
+      { time: "07:10 PM", titleKey: 'eventsData.event1.agenda[6].title', duration: "40 min" },
+      { time: "07:50 PM", titleKey: 'eventsData.event1.agenda[7].title', duration: "40 min" }
     ],
     speakers: [
       {
-        name: "Dr. Antwi-Boasiako",
-        title: "Author, Cyber Security Expert",
-        bio: "Leading Ghana's cybersecurity initiatives with over 15 years of experience in digital security governance and policy development.",
+        nameKey: 'eventsData.event1.speakers[0].name',
+        titleKey: 'eventsData.event1.speakers[0].title',
+        bioKey: 'eventsData.event1.speakers[0].bio',
         image: "/image/CEO.png"
       },
       {
-        name: "Prof. Jane Smith",
-        title: "Cybersecurity Expert, University of Ghana",
-        bio: "Specializing in digital forensics and cybercrime investigation with extensive research experience in African cybersecurity challenges.",
+        nameKey: 'eventsData.event1.speakers[1].name',
+        titleKey: 'eventsData.event1.speakers[1].title',
+        bioKey: 'eventsData.event1.speakers[1].bio',
         image: "/image/aboutpics.png"
       },
       {
-        name: "Dr. Michael Johnson",
-        title: "Senior Security Consultant",
-        bio: "Expert in enterprise security architecture and risk management with over 20 years of experience in the field.",
+        nameKey: 'eventsData.event1.speakers[2].name',
+        titleKey: 'eventsData.event1.speakers[2].title',
+        bioKey: 'eventsData.event1.speakers[2].bio',
         image: "/image/IMG_9663 2.png"
       }
     ],
@@ -108,8 +111,8 @@ export default function EventDetailPage({ params }) {
       videos: [
         {
           id: 1,
-          title: "Book Launch Highlights",
-          description: "Official highlights video from the Book Launch of 'The Republic: A Professional Journey, Ghana's Cybersecurity & the Making of a Role Model Country'",
+          titleKey: 'eventsData.event1.media.videos[0].title',
+          descriptionKey: 'eventsData.event1.media.videos[0].description',
           thumbnail: "/image/events/book_highlights.png",
           duration: "Video",
           url: "https://res.cloudinary.com/lajsolns-gmail-com/video/upload/v1765181489/rux3qgjvoxg6gb8kfikl.mp4",
@@ -300,28 +303,28 @@ export default function EventDetailPage({ params }) {
 
   const event2 = {
     id: 2,
-    title: "Digital Assets Summit Africa (DASA '25)",
-    subtitle: "Unlocking Africa's Digital Economy Through Innovation & Regulation",
-    description: "Dr. Albert Antwi-Boasiako, a leading voice in cybersecurity, will be speaking at the Digital Assets Summit Africa (DASA '25). This premier event brings together policymakers, industry leaders, and innovators to explore the future of digital assets and blockchain technology in Africa.",
-    longDescription: "The Digital Assets Summit Africa (DASA '25) is a premier event bringing together policymakers, industry leaders, and innovators to explore the future of digital assets and blockchain technology in Africa. Dr. Albert Antwi-Boasiako, a leading voice in cybersecurity, will be sharing insights on the intersection of digital economy innovation and robust regulatory frameworks to ensure sustainable growth and security in the continent's rapidly evolving digital landscape.",
+    titleKey: 'eventsData.event2.title',
+    subtitleKey: 'eventsData.event2.subtitle',
+    descriptionKey: 'eventsData.event2.description',
+    longDescriptionKey: 'eventsData.event2.longDescription',
     date: "29 - 30 September, 2025",
     time: "06:00 PM",
     endDate: "2025-09-30",
     endTime: "08:00 PM",
-    location: "Ghana-India Kofi Annan Centre of Excellence in ICT (GI-KACE), Accra",
-    address: "Ridge, Accra, Ghana",
+    locationKey: 'eventsData.event2.location',
+    addressKey: 'eventsData.event2.address',
     type: "past",
     category: "author",
     image: "/image/events/dasa25.jpeg",
     attendees: 50,
-    speaker: "Dr. Antwi-Boasiako",
+    speakerKey: 'eventsData.event2.speaker',
     registrationLink: "#register",
     agenda: [],
     speakers: [
       {
-        name: "Dr. Antwi-Boasiako",
-        title: "Author, Cyber Security Expert",
-        bio: "Leading Ghana's cybersecurity initiatives with over 15 years of experience in digital security governance and policy development.",
+        nameKey: 'eventsData.event2.speaker',
+        titleKey: 'eventsData.event2.speakerTitle',
+        bioKey: 'eventsData.event2.speakerBio',
         image: "/image/CEO.png"
       }
     ],
@@ -343,28 +346,28 @@ export default function EventDetailPage({ params }) {
 
   const event3 = {
     id: 3,
-    title: "The 10 Commandments for Sustainable National Cybersecurity Development",
-    subtitle: "Africa in Context: Practical Lessons & Good Practices",
-    description: "Dr. Albert Antwi-Boasiako invites you to the launch of 'The 10 Commandments for Sustainable National Cybersecurity Development'.",
-    longDescription: "This landmark publication offers practical lessons and good practices tailored to the African context. Dr. Antwi-Boasiako shares invaluable insights drawn from his extensive experience in building robust cybersecurity frameworks, making this an essential read for professionals and policymakers across the continent.",
+    titleKey: 'eventsData.event3.title',
+    subtitleKey: 'eventsData.event3.subtitle',
+    descriptionKey: 'eventsData.event3.description',
+    longDescriptionKey: 'eventsData.event3.longDescription',
     date: "2024-11-28",
     time: "09:00 AM",
     endDate: "2024-11-28",
     endTime: "12:00 PM",
-    location: "British Council, Liberia Road, Accra",
-    address: "Liberia Road, Accra, Ghana",
+    locationKey: 'eventsData.event3.location',
+    addressKey: 'eventsData.event3.address',
     type: "past",
     category: "launch",
     image: "/image/events/book_launch_english.jpeg",
     attendees: 75,
-    speaker: "Dr. Antwi-Boasiako",
+    speakerKey: 'eventsData.event3.speaker',
     registrationLink: null,
     agenda: [],
     speakers: [
       {
-        name: "Dr. Antwi-Boasiako",
-        title: "Author, Cyber Security Expert",
-        bio: "Leading Ghana's cybersecurity initiatives with over 15 years of experience in digital security governance and policy development.",
+        nameKey: 'eventsData.event3.speaker',
+        titleKey: 'eventsData.event3.speakerTitle',
+        bioKey: 'eventsData.event3.speakerBio',
         image: "/image/CEO.png"
       }
     ],
@@ -372,8 +375,8 @@ export default function EventDetailPage({ params }) {
       videos: [
         {
           id: 1,
-          title: "Documentary: The 10 Commandments",
-          description: "Africa in Context: Practical Lessons & Good Practices — Sustainable National Cybersecurity Development",
+          titleKey: 'eventsData.event3.media.videos[0].title',
+          descriptionKey: 'eventsData.event3.media.videos[0].description',
           thumbnail: "/image/documentary_book.png",
           duration: "Documentary",
           url: "https://res.cloudinary.com/dnkvwgxxn/video/upload/v1732422376/10cmd_compressed_iv0pge.mp4",
@@ -457,28 +460,28 @@ export default function EventDetailPage({ params }) {
 
   const event4 = {
     id: 4,
-    title: "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
-    subtitle: "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques",
-    description: "Rejoignez le Dr Albert Antwi-Boasiako pour le lancement de l'édition française de son ouvrage fondamental.",
-    longDescription: "Cet événement exclusif au Maroc célèbre la traduction française des '10 Commandements pour un Développement National Durable de la Cybersécurité'. Une occasion unique d'aborder les défis et opportunités de la cybersécurité dans le contexte africain francophone.",
+    titleKey: 'eventsData.event4.title',
+    subtitleKey: 'eventsData.event4.subtitle',
+    descriptionKey: 'eventsData.event4.description',
+    longDescriptionKey: 'eventsData.event4.longDescription',
     date: "2024-02-04",
     time: "10:30 AM",
     endDate: "2024-02-04",
     endTime: "02:00 PM",
-    location: "Morroco",
-    address: "Morroco",
+    locationKey: 'eventsData.event4.location',
+    addressKey: 'eventsData.event4.address',
     type: "past",
     category: "author",
     image: "/image/book_launch_french_flyer.jpeg",
     attendees: 75,
-    speaker: "Dr. Antwi-Boasiako",
+    speakerKey: 'eventsData.event4.speaker',
     registrationLink: null,
     agenda: [],
     speakers: [
       {
-        name: "Dr. Antwi-Boasiako",
-        title: "Auteur, Expert en Cybersécurité",
-        bio: "Dirigeant les initiatives de cybersécurité du Ghana avec plus de 15 ans d'expérience.",
+        nameKey: 'eventsData.event4.speaker',
+        titleKey: 'eventsData.event4.speakerTitle',
+        bioKey: 'eventsData.event4.speakerBio',
         image: "/image/CEO.png"
       }
     ],
@@ -486,8 +489,8 @@ export default function EventDetailPage({ params }) {
       videos: [
         {
           id: 1,
-          title: "Documentary: Les 10 Commandements",
-          description: "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques — Développement National Durable de la Cybersécurité",
+          titleKey: 'eventsData.event4.media.videos[0].title',
+          descriptionKey: 'eventsData.event4.media.videos[0].description',
           thumbnail: "/image/documentary_book.png",
           duration: "Documentary",
           url: "https://res.cloudinary.com/dnkvwgxxn/video/upload/v1732422376/10cmd_compressed_iv0pge.mp4",
@@ -511,15 +514,15 @@ export default function EventDetailPage({ params }) {
   // Rotating quotes
   const rotatingQuotes = [
     {
-      text: '"Transforming cybersecurity education across Africa through innovative research and practical implementation"',
+      text: t('quotes.transforming'),
       link: '#new-releases'
     },
     {
-      text: '"Building the next generation of cybersecurity professionals with cutting-edge knowledge and skills"',
+      text: t('quotes.building'),
       link: '#categories'
     },
     {
-      text: '"Pioneering digital security solutions for a safer, more connected world"',
+      text: t('quotes.pioneering'),
       link: '#events'
     }
   ];
@@ -542,7 +545,8 @@ export default function EventDetailPage({ params }) {
       return dateString;
     }
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
+    const locale = t('locale') === 'fr' ? 'fr-FR' : 'en-US';
+    return date.toLocaleDateString(locale, options);
   };
 
   return (
@@ -569,7 +573,7 @@ export default function EventDetailPage({ params }) {
               className="inline-flex items-center text-gray-500 hover:text-amber-800 transition-colors font-inter text-xs tracking-widest uppercase"
             >
               <FiArrowLeft className="mr-2" />
-              Back to Events
+              {t('eventDetail.backToEvents')}
             </Link>
           </div>
 
@@ -579,11 +583,11 @@ export default function EventDetailPage({ params }) {
               {event.category} • {formatDate(event.date)}
             </span>
             <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6 tracking-tight">
-              {event.title}
+              {t(event.titleKey)}
             </h1>
             <div className="w-16 h-[1px] bg-amber-800 mx-auto mt-6 mb-8"></div>
             <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
-              {event.subtitle}
+              {t(event.subtitleKey)}
             </p>
           </div>
 
@@ -600,11 +604,11 @@ export default function EventDetailPage({ params }) {
                 <div className="prose prose-lg max-w-none">
                   <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-6 flex items-center">
                     <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                    Event Description
+                    {t('eventDetail.eventDescription')}
                     <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                   </h3>
                   <p className="font-inter text-gray-700 leading-relaxed text-lg font-light">
-                    {event.longDescription}
+                    {t(event.longDescriptionKey)}
                   </p>
                 </div>
               </div>
@@ -616,7 +620,7 @@ export default function EventDetailPage({ params }) {
                     {event.image ? (
                       <Image
                         src={event.image}
-                        alt={event.title}
+                        alt={t(event.titleKey)}
                         fill
                         className="object-cover hover:scale-105 transition-all duration-700"
                       />
@@ -631,7 +635,7 @@ export default function EventDetailPage({ params }) {
                     <div className="flex items-start">
                       <FiCalendar className="w-5 h-5 text-amber-800 mr-4 mt-0.5" />
                       <div>
-                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">Date</p>
+                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">{t('eventDetail.date')}</p>
                         <p className="font-inter text-sm text-gray-900 font-medium">
                           {formatDate(event.date)}
                         </p>
@@ -644,12 +648,12 @@ export default function EventDetailPage({ params }) {
                     <div className="flex items-start">
                       <FiMapPin className="w-5 h-5 text-amber-800 mr-4 mt-0.5" />
                       <div>
-                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">Venue</p>
+                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">{t('eventDetail.venue')}</p>
                         <p className="font-inter text-sm text-gray-900 font-medium">
-                          {event.location}
+                          {t(event.locationKey)}
                         </p>
                         <p className="font-inter text-xs text-gray-500 mt-1 uppercase tracking-tighter">
-                          {event.address}
+                          {t(event.addressKey)}
                         </p>
                       </div>
                     </div>
@@ -657,9 +661,9 @@ export default function EventDetailPage({ params }) {
                     <div className="flex items-center">
                       <FiUsers className="w-5 h-5 text-amber-800 mr-4" />
                       <div>
-                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">Attendance</p>
+                        <p className="font-inter text-xs tracking-widest text-gray-400 uppercase mb-1">{t('eventDetail.attendance')}</p>
                         <p className="font-inter text-sm text-gray-900 font-medium">
-                          {event.attendees} Professionals
+                          {event.attendees} {t('eventDetail.professionals')}
                         </p>
                       </div>
                     </div>
@@ -667,18 +671,18 @@ export default function EventDetailPage({ params }) {
 
                   {event.type === 'upcoming' && (
                     <button className="w-full mt-10 px-6 py-4 bg-gray-900 text-white hover:bg-amber-900 transition-colors duration-300 font-inter text-xs tracking-[0.2em] uppercase">
-                      Register Attendance
+                      {t('eventDetail.registerAttendance')}
                     </button>
                   )}
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <button className="flex-1 px-4 py-3 border border-gray-200 text-gray-600 hover:border-amber-800 hover:text-amber-800 transition-all duration-300 font-inter text-[10px] tracking-widest uppercase">
                       <FiShare2 className="w-3 h-3 inline mr-2" />
-                      Share
+                      {t('eventDetail.share')}
                     </button>
                     <button className="flex-1 px-4 py-3 border border-gray-200 text-gray-600 hover:border-amber-800 hover:text-amber-800 transition-all duration-300 font-inter text-[10px] tracking-widest uppercase">
                       <FiEdit className="w-3 h-3 inline mr-2" />
-                      Export
+                      {t('eventDetail.export')}
                     </button>
                   </div>
                 </div>
@@ -710,24 +714,24 @@ export default function EventDetailPage({ params }) {
                   <div className="prose prose-lg max-w-none">
                     <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                       <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                      Detailed Highlights
+                      {t('eventDetail.detailedHighlights')}
                       <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                     </h3>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6">
                       <div className="space-y-4">
                         <p className="font-inter text-gray-700 leading-relaxed font-light">
-                          {event.longDescription}
+                          {t(event.longDescriptionKey)}
                         </p>
                       </div>
                       <div className="bg-gray-50 p-8 border border-gray-100">
-                        <h4 className="font-playfair text-xl mb-6 italic text-gray-800">Key Focus Areas</h4>
+                        <h4 className="font-playfair text-xl mb-6 italic text-gray-800">{t('eventDetail.keyFocusAreas')}</h4>
                         <ul className="space-y-4">
                           {[
-                            "Ghana's cybersecurity evolution",
-                            "Digital transformation in Africa",
-                            "Best practices for national security",
-                            "Collaborative approaches to cyber defense",
-                            "Future trends and technologies"
+                            t('eventDetail.ghanaCybersecurityEvolution'),
+                            t('eventDetail.digitalTransformationAfrica'),
+                            t('eventDetail.bestPracticesNationalSecurity'),
+                            t('eventDetail.collaborativeApproachesCyberDefense'),
+                            t('eventDetail.futureTrendsTechnologies')
                           ].map((item, idx) => (
                             <li key={idx} className="flex items-center font-inter text-sm text-gray-600 font-light">
                               <span className="w-1.5 h-1.5 bg-amber-800 rounded-full mr-4 flex-shrink-0"></span>
@@ -744,7 +748,7 @@ export default function EventDetailPage({ params }) {
                   <div>
                     <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                       <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                      Schedule of Proceedings
+                      {t('eventDetail.scheduleOfProceedings')}
                       <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                     </h3>
                     <div className="space-y-1">
@@ -760,7 +764,7 @@ export default function EventDetailPage({ params }) {
                           </div>
                           <div className="ml-8 flex-grow">
                             <p className="font-inter text-gray-800 text-sm font-light tracking-wide group-hover:translate-x-1 transition-transform">
-                              {item.title}
+                              {t(item.titleKey)}
                             </p>
                           </div>
                         </div>
@@ -773,7 +777,7 @@ export default function EventDetailPage({ params }) {
                   <div>
                     <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                       <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                      Distinguished Speakers
+                      {t('eventDetail.distinguishedSpeakers')}
                       <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                     </h3>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -783,7 +787,7 @@ export default function EventDetailPage({ params }) {
                             {speaker.image ? (
                               <Image
                                 src={speaker.image}
-                                alt={speaker.name}
+                                alt={t(speaker.nameKey)}
                                 fill
                                 className="object-cover transition-all duration-700 group-hover:scale-105"
                               />
@@ -795,13 +799,13 @@ export default function EventDetailPage({ params }) {
                           </div>
                           <div className="flex-1">
                             <h4 className="font-playfair text-xl text-gray-900 mb-1 group-hover:text-amber-800 transition-colors">
-                              {speaker.name}
+                              {t(speaker.nameKey)}
                             </h4>
                             <p className="font-inter text-[10px] tracking-[0.2em] text-gray-400 uppercase mb-4">
-                              {speaker.title}
+                              {t(speaker.titleKey)}
                             </p>
                             <p className="font-inter text-sm text-gray-600 font-light leading-relaxed italic">
-                              "{speaker.bio}"
+                              "{t(speaker.bioKey)}"
                             </p>
                           </div>
                         </div>
@@ -816,7 +820,7 @@ export default function EventDetailPage({ params }) {
                     <div>
                       <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                         <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                        Event Footage
+                        {t('eventDetail.eventFootage')}
                         <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -825,10 +829,10 @@ export default function EventDetailPage({ params }) {
                             <VideoPlayer video={video} />
                             <div className="mt-6">
                               <h4 className="font-playfair text-lg text-gray-900 mb-2">
-                                {video.title}
+                                {t(video.titleKey)}
                               </h4>
                               <p className="font-inter text-sm text-gray-500 font-light line-clamp-2">
-                                {video.description}
+                                {t(video.descriptionKey)}
                               </p>
                             </div>
                           </div>
@@ -842,7 +846,7 @@ export default function EventDetailPage({ params }) {
                       <div>
                         <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                           <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                          Documentation
+                          {t('eventDetail.documentation')}
                           <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                         </h3>
                         <div className="space-y-4">
@@ -871,7 +875,7 @@ export default function EventDetailPage({ params }) {
                       <div>
                         <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                           <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                          Audio Archive
+                          {t('eventDetail.audioArchive')}
                           <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                         </h3>
                         <div className="space-y-4">
@@ -903,7 +907,7 @@ export default function EventDetailPage({ params }) {
                   <div>
                     <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                       <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                      Photo Collection
+                      {t('eventDetail.photoCollection')}
                       <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                     </h3>
 
@@ -940,7 +944,7 @@ export default function EventDetailPage({ params }) {
                         }}
                         className="inline-flex items-center px-10 py-4 bg-gray-900 text-white hover:bg-amber-900 transition-all duration-300 font-inter text-xs tracking-[0.3em] uppercase"
                       >
-                        Explore Archive — {event.gallery.length} Plates
+                        {t('eventDetail.exploreArchive', { count: event.gallery.length })}
                       </button>
                     </div>
                   </div>

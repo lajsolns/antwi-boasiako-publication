@@ -1,4 +1,5 @@
 {
+    "locale": "fr",
     "nav": {
         "home": "Accueil",
         "allBooks": "Publications",
@@ -128,8 +129,97 @@
         "description": "Explorez notre collection complète de publications sur la cybersécurité, la transformation numérique et la recherche académique.",
         "viewDetails": "Voir les Détails",
         "intlPrice": "Intl",
-        "ghPrice": "GH"
+        "ghPrice": "GH",
+        "rotatingQuotes": [
+            { "text": "\"Transformer l'éducation à la cybersécurité à travers l'Afrique grâce à une recherche innovante et une mise en œuvre pratique\"", "link": "#new-releases" },
+            { "text": "\"Former la prochaine génération de professionnels de la cybersécurité avec des connaissances et des compétences de pointe\"", "link": "#categories" },
+            { "text": "\"Pionnier des solutions de sécurité numérique pour un monde plus sûr et plus connecté\"", "link": "#events" }
+        ],
+        "books": {
+            "book1": {
+                "title": "The Republic",
+                "subtitle": "Un Parcours Professionnel, la Cybersécurité du Ghana et la Création d'un Pays Modèle",
+                "description": "THE REPUBLIC offre un regard rare et des coulisses sur le développement de la cybersécurité au Ghana — de ses débuts formateurs à une décennie de reconnaissance mondiale. À travers une narration vivante et une documentation authentique, il retrace comment une vision nationale partagée, menée par des individus engagés au sein du gouvernement, de la fonction publique, de l'industrie et des partenariats internationaux, a construit l'un des écosystèmes de cybersécurité les plus respectés d'Afrique.",
+                "longDescription": "Les histoires donnent vie à chaque transformation et à chaque impact. THE REPUBLIC détaille l'histoire de la manière dont la vision, le courage et la collaboration ont façonné un avenir numérique autrefois jugé hors de portée. THE REPUBLIC offre un regard rare, en coulisses, sur le développement de la cybersécurité au Ghana — de ses premiers jours formateurs à une décennie de reconnaissance mondiale. À travers une narration vivante et une documentation authentique, il retrace comment une vision nationale partagée, menée par des individus engagés au sein du gouvernement, de la fonction publique, de l'industrie et des partenariats internationaux, a construit l'un des écosystèmes de cybersécurité les plus respectés d'Afrique. Au cœur de ce livre se trouve le parcours personnel de l'auteur — un architecte clé de cette transformation — dont les réflexions révèlent les défis, les opportunités, les tournants et les triomphes qui ont défini l'ascension du Ghana pour devenir un pays modèle de niveau 1 pour le continent africain et le Sud global. Plus qu'une histoire, THE REPUBLIC est un hommage au leadership qui produit des résultats — un leadership fondé sur la concentration, le patriotisme et le but. C'est une célébration des personnalités clés et des acteurs qui ont contribué à ce voyage de développement. C'est également une invitation aux lecteurs à réimaginer ce que des citoyens déterminés et une fonction publique visionnaire peuvent accomplir ensemble. Pour les dirigeants, les décideurs, les professionnels et tous ceux qui croient en la promesse et en la possibilité d'une fonction publique visionnaire, THE REPUBLIC offre à la fois une histoire fascinante et un plan directeur pour l'impact.",
+                "authorBio": "Le Dr Albert Antwi-Boasiako est le principal expert en cybersécurité du Ghana et le directeur général de la Cyber Security Authority. Avec près de deux décennies d'expérience professionnelle, il a été le pionnier des cadres nationaux de cybersécurité et a positionné le Ghana comme un leader de la cyberdéfense africaine."
+            },
+            "book2": {
+                "title": "The 10 Commandments for Sustainable National Cybersecurity Development",
+                "subtitle": "Un cadre pour la construction d'écosystèmes de cybersécurité résilients",
+                "description": "Dans ce livre, le Dr Albert Antwi-Boasiako fournit des perspectives et des pistes sur le développement de la cybersécurité au niveau national, en se concentrant sur le continent africain. Il tire des enseignements, des leçons inestimables et des bonnes pratiques de plus d'une décennie de travail sur le continent africain et d'engagement dans des activités de cybersécurité à travers le monde.",
+                "longDescription": "Cet ouvrage séminal présente un cadre complet pour le développement de la cybersécurité nationale, distillé en dix commandements fondamentaux. Chaque commandement est exploré en profondeur avec des exemples pratiques, des stratégies de mise en œuvre et des études de cas réels issues de la vaste expérience du Dr Antwi-Boasiako de travail avec les gouvernements à travers l'Afrique. Le livre aborde des sujets critiques, notamment l'élaboration de politiques, le renforcement des capacités, la coopération internationale, les partenariats public-privé et l'équilibre entre sécurité et croissance économique. Il sert à la fois de guide stratégique pour les décideurs politiques et de manuel pratique pour les professionnels de la cybersécurité.",
+                "authorBio": "Le Dr Albert Antwi-Boasiako sert de consultant auprès de plusieurs gouvernements africains sur la politique de cybersécurité et a joué un rôle déterminant dans l'élaboration d'initiatives régionales de coopération en matière de cybersécurité."
+            },
+            "book3": {
+                "title": "Les 10 Commandements pour un Développement Nationale Durable de la Cybersécurité",
+                "subtitle": "Leadership stratégique pour le changement organisationnel à l'ère numérique",
+                "description": "Dans ce livre, Dr Albert Antwi-Boasiako fournit des perspectives et des indications sur le développement de la cybersécurité au niveau national, en se concentrant sur le contexte africain.",
+                "longDescription": "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité propose une approche globale pour naviguer dans le paysage complexe du changement organisationnel à l'ère numérique. Le Dr Antwi-Boasiako combine son expertise technique en cybersécurité avec des connaissances stratégiques en affaires pour fournir un cadre holistique pour la transformation numérique. Le livre couvre des sujets critiques, notamment la modernisation des systèmes hérités, les stratégies d'adoption du cloud, la cybersécurité dans la transformation, la gouvernance des données et la gestion du changement culturel. À travers des études de cas détaillées et des cadres pratiques, les lecteurs apprendront comment élaborer et mettre en œuvre des stratégies de transformation numérique qui s'alignent sur les objectifs organisationnels tout en gérant les risques et en maximisant les opportunités à l'ère numérique.",
+                "authorBio": "Leader d'opinion reconnu en cybersécurité et en transformation numérique, le Dr Antwi-Boasiako a aidé de nombreuses organisations à travers l'Afrique à naviguer avec succès dans leurs parcours numériques."
+            }
+        },
+        "newReleases": [
+            {
+                "title": "White Spines",
+                "description": "Confessions d'un collectionneur de livres dans ce mémoire intime."
+            },
+            {
+                "title": "The Night-Soil Men",
+                "description": "Un récit captivant de la vie urbaine et des histoires cachées."
+            },
+            {
+                "title": "Best British Short Stories 2024",
+                "description": "La collection définitive de fiction courte de l'année."
+            },
+            {
+                "title": "The Peckham Experiment",
+                "description": "Une étude révolutionnaire sur la communauté et le changement social."
+            }
+        ]
     },
+    "bookDetail": {
+        "notFoundTitle": "Livre Non Trouvé",
+        "notFoundMessage": "Le livre que vous recherchez n'existe pas.",
+        "backToPublications": "Retour aux Publications",
+        "selectFormat": "Sélectionner le Format",
+        "paperback": "Broché",
+        "ebook": "Ebook",
+        "quantity": "Quantité",
+        "addToCart": "Ajouter au Panier",
+        "synopsis": "Synopsis",
+        "recommendations": "Recommandations",
+        "productDetails": "Détails du Produit",
+        "isbn10": "ISBN-10",
+        "isbn13": "ISBN-13",
+        "pages": "Pages",
+        "language": "Langue",
+        "published": "Publié",
+        "formatLabel": "Format",
+        "trimSize": "Dimensions",
+        "weight": "Poids",
+        "publisher": "Éditeur",
+        "english": "Anglais",
+        "french": "Français"
+    },
+    "youMayAlsoLike": {
+        "discover": "Découvrir",
+        "title": "Vous pourriez aussi aimer",
+        "exploreMore": "Explorez plus de publications du Dr. Antwi-Boasiako"
+    },
+    "recommendations": [
+        {
+            "quote": "\"Le travail du Dr Antwi-Boasiako est devenu une lecture essentielle pour notre programme de cybersécurité. The Republic offre des perspectives inégalées sur l'évolution de la sécurité numérique du Ghana.\"",
+            "source": "Prof. Centre Kofi Annan, Institution Académique"
+        },
+        {
+            "quote": "\"Le cadre des 10 Commandements a transformé notre approche de la stratégie nationale de cybersécurité. Clair, exploitable et basé sur une expérience concrète.\"",
+            "source": "Sarah Johnson, Analyste en Cybersécurité"
+        },
+        {
+            "quote": "\"Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité est le guide le plus complet que j'aie trouvé pour diriger le changement organisationnel. L'expertise du Dr Antwi-Boasiako transparaît dans chaque chapitre.\"",
+            "source": "Michael Chen, Consultant en Transformation Numérique"
+        }
+    ],
     "events": {
         "superheading": "Notre Calendrier",
         "title": "Événements des Publications",
@@ -216,7 +306,19 @@
         "title": "Voyage Visuel",
         "description": "Une collection curatée de moments issus de nos événements littéraires, lancements de livres, et de la communauté dynamique qui donne vie à nos récits.",
         "viewDetails": "Voir les Détails",
-        "viewMore": "Voir Plus d'Archives"
+        "viewMore": "Voir Plus d'Archives",
+        "backToGallery": "Retour à la Galerie",
+        "eventFootage": "Séquence de l'Événement",
+        "photoGallery": "Galerie de Photos",
+        "viewFullScreen": "Voir en Plein Écran",
+        "zoom": "Agrandir",
+        "plate": "Planche",
+        "collectionArchive": "Archive de Collection",
+        "quote1": "\"Partager les travaux intellectuels du Dr Albert Antwi-Boasiako\"",
+        "quote2": "\"Édition indépendante de voix distinctes de l'Afrique\"",
+        "quote3": "\"Célébrer l'excellence dans la littérature sur la cybersécurité\"",
+        "quote4": "\"Combler le déficit de connaissances grâce à une édition innovante\"",
+        "quote5": "\"Votre source de confiance pour des perspectives professionnelles\""
     },
     "privacyPolicy": {
         "title": "Politique de Confidentialité",
@@ -435,6 +537,245 @@
         "newsletterDesc": "Recevez des mises à jour mensuelles sur les nouvelles parutions, les interviews d'auteurs et des extraits exclusifs de notre Magazine Maison directement dans votre boîte de réception.",
         "emailPlaceholder": "Entrez votre adresse e-mail",
         "subscribe": "S'abonner",
-        "followUs": "Suivez-nous pour une inspiration littéraire quotidienne"
+        "followUs": "Suivez-nous pour une inspiration littéraire quotidienne",
+        "viewAllEvents": "Voir Tous les Événements",
+        "features": [
+            {
+                "title": "Lecture essentielle pour les professionnels de la cybersécurité",
+                "source": "TechCrunch",
+                "description": "« The Republic » du Dr Antwi-Boasiako offre des perspectives inestimables sur le parcours de transformation numérique du Ghana."
+            },
+            {
+                "title": "Une approche révolutionnaire de la gouvernance de la cybersécurité",
+                "source": "Harvard Business Review",
+                "description": "Le cadre des 10 commandements propose des solutions pratiques pour les défis de sécurité nationale."
+            },
+            {
+                "title": "Un leadership visionnaire dans la transformation numérique",
+                "source": "Forbes Africa",
+                "description": "Le Dr Albert Antwi-Boasiako partage son expertise sur la mise en place de cadres de cybersécurité résilients."
+            },
+            {
+                "title": "Guide complet de la cybersécurité nationale",
+                "source": "BBC Technology",
+                "description": "Une ressource faisant autorité pour les décideurs politiques et les professionnels de la sécurité du monde entier."
+            },
+            {
+                "title": "Approche transformatrice de la gouvernance numérique",
+                "source": "The Guardian",
+                "description": "Stratégies innovantes pour construire une infrastructure numérique sécurisée dans les pays en développement."
+            },
+            {
+                "title": "Voix de premier plan dans la cybersécurité africaine",
+                "source": "Al Jazeera Technology",
+                "description": "Le travail du Dr Antwi-Boasiako façonne l'avenir de la sécurité numérique sur tout le continent."
+            }
+        ],
+        "testimonials": [
+            {
+                "name": "Dr. Sarah Chen",
+                "role": "Responsable de la sécurité de l'IA, TechCorp Global",
+                "content": "The Republic n'est pas seulement un livre, c'est un plan directeur pour la souveraineté numérique à l'ère de l'IA. Les réflexions du Dr Antwi-Boasiako sur les cadres de cybersécurité résistants au quantique ont fondamentalement façonné notre stratégie de sécurité pour 2026.",
+                "expertise": "Sécurité de l'IA"
+            },
+            {
+                "name": "Prof. Marcus Williams",
+                "role": "Directeur, Institut Africain de Politique Numérique",
+                "content": "À l'ère de la gouvernance algorithmique, ce travail fournit le cadre éthique dont nous avons désespérément besoin. C'est devenu une lecture obligatoire pour tout décideur politique façonnant l'avenir numérique de l'Afrique.",
+                "expertise": "Politique Numérique"
+            },
+            {
+                "name": "Amara Okonkwo",
+                "role": "Responsable Cybersécurité, Banque Panafricaine",
+                "content": "Le cadre des 10 Commandements a révolutionné notre approche de la cybersécurité financière dans le paysage de l'informatique post-quantique. Une lecture essentielle pour les leaders modernes de la fintech.",
+                "expertise": "Sécurité FinTech"
+            },
+            {
+                "name": "Lt. Gen. James Mitchell",
+                "role": "Retraité, Commandement Cyber de l'OTAN",
+                "content": "Le travail du Dr Antwi-Boasiako comble le fossé entre la théorie académique et la réalité du terrain. C'est le guide définitif pour les stratégies modernes de cyberdéfense.",
+                "expertise": "Sécurité Défense"
+            }
+        ]
+    },
+    "eventsData": {
+        "event1": {
+            "title": "Lancement de Livre: The Republic",
+            "subtitle": "Un Parcours Professionnel, la Cybersécurité du Ghana et la Création d'un Pays Modèle",
+            "description": "Rejoignez le Dr Antwi-Boasiako pour le lancement officiel de son dernier livre 'The Republic'. Cette publication landmark explore l'évolution de la cybersécurité du Ghana et le parcours du pays vers becoming un modèle mondial en cybersécurité.",
+            "longDescription": "Le lancement du livre The Republic célèbre la sortie de l'œuvre séminaire du Dr Antwi-Boasiako sur le parcours de la cybersécurité du Ghana. Cet événement exclusif présente des lectures du livre, des discussions perspicaces sur les thèmes explorés, et des opportunités pour les participants d'interagir avec l'auteur. La publication représente une analyse complète de la transformation du Ghana en leader de la cybersécurité en Afrique, faisant de ce lancement un moment significatif dans le paysage technologique et littéraire de la nation.",
+            "location": "British Council, Route Liberia, Accra",
+            "address": "Route Liberia, Accra, Ghana",
+            "speaker": "Dr Antwi-Boasiako",
+            "agenda": [
+                { "time": "05:00 PM", "title": "Arrivée des Invités & Réception de Bienvenue", "duration": "30 min" },
+                { "time": "05:30 PM", "title": "Remarques d'Ouverture", "duration": "10 min" },
+                { "time": "05:40 PM", "title": "Introduction de l'Auteur", "duration": "15 min" },
+                { "time": "05:55 PM", "title": "Lecture du Livre - Chapitres Sélectionnés", "duration": "25 min" },
+                { "time": "06:20 PM", "title": "Session Q&R avec l'Auteur", "duration": "30 min" },
+                { "time": "06:50 PM", "title": "Discussion Littéraire", "duration": "20 min" },
+                { "time": "07:10 PM", "title": "Session de Dédicace", "duration": "40 min" },
+                { "time": "07:50 PM", "title": "Réseautage & Rafraîchissements", "duration": "40 min" }
+            ],
+            "speakers": [
+                {
+                    "name": "Dr Antwi-Boasiako",
+                    "title": "Auteur, Expert en Cybersécurité",
+                    "bio": "Dirigeant les initiatives de cybersécurité du Ghana avec plus de 15 ans d'expérience en gouvernance de la sécurité numérique et développement des politiques."
+                },
+                {
+                    "name": "Prof. Jane Smith",
+                    "title": "Expert en Cybersécurité, Université du Ghana",
+                    "bio": "Spécialisant en forensique numérique et investigation de la cybercriminalité avec une expérience de recherche extensive dans les défis de la cybersécurité africaine."
+                },
+                {
+                    "name": "Dr Michael Johnson",
+                    "title": "Consultant Senior en Sécurité",
+                    "bio": "Expert en architecture de sécurité d'entreprise et gestion des risques avec plus de 20 ans d'expérience dans le domaine."
+                }
+            ],
+            "media": {
+                "videos": [
+                    {
+                        "title": "Points Forts du Lancement du Livre",
+                        "description": "Vidéo officielle des points forts du Lancement du Livre 'The Republic: Un Parcours Professionnel, la Cybersécurité du Ghana et la Création d'un Pays Modèle'",
+                        "duration": "Vidéo"
+                    }
+                ]
+            }
+        },
+        "event2": {
+            "title": "Sommet des Actifs Numériques Afrique (DASA '25)",
+            "subtitle": "Débloquer l'Économie Numérique de l'Afrique à travers l'Innovation & la Réglementation",
+            "description": "Le Dr Albert Antwi-Boasiako, une voix leader en cybersécurité, parlera au Sommet des Actifs Numériques Afrique (DASA '25). Cet événement premier réunit décideurs politiques, leaders de l'industrie et innovateurs pour explorer l'avenir des actifs numériques et de la technologie blockchain en Afrique.",
+            "longDescription": "Le Sommet des Actifs Numériques Afrique (DASA '25) est un événement premier réunissant décideurs politiques, leaders de l'industrie et innovateurs pour explorer l'avenir des actifs numériques et de la technologie blockchain en Afrique. Le Dr Albert Antwi-Boasiako, une voix leader en cybersécurité, partagera des perspectives sur l'intersection de l'innovation de l'économie numérique et des cadres réglementaires robustes pour assurer une croissance durable et la sécurité dans le paysage numérique en évolution rapide du continent.",
+            "location": "Centre d'Excellence Ghana-Inde Kofi Annan en TIC (GI-KACE), Accra",
+            "address": "Ridge, Accra, Ghana",
+            "speaker": "Dr Antwi-Boasiako",
+            "speakerTitle": "Auteur, Expert en Cybersécurité",
+            "speakerBio": "Dirigeant les initiatives de cybersécurité du Ghana avec plus de 15 ans d'expérience en gouvernance de la sécurité numérique et développement des politiques."
+        },
+        "event3": {
+            "title": "Les 10 Commandements pour un Développement National Durable de la Cybersécurité",
+            "subtitle": "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques",
+            "description": "Le Dr Albert Antwi-Boasiako vous invite au lancement des '10 Commandements pour un Développement National Durable de la Cybersécurité'.",
+            "longDescription": "Cette publication landmark offre des leçons pratiques et des bonnes pratiques adaptées au contexte africain. Le Dr Antwi-Boasiako partage des perspectives inestimables tirées de son expérience extensive dans la construction de cadres de cybersécurité robustes, faisant de ceci une lecture essentielle pour les professionnels et décideurs politiques à travers le continent.",
+            "location": "British Council, Route Liberia, Accra",
+            "address": "Route Liberia, Accra, Ghana",
+            "speaker": "Dr Antwi-Boasiako",
+            "speakerTitle": "Auteur, Expert en Cybersécurité",
+            "speakerBio": "Dirigeant les initiatives de cybersécurité du Ghana avec plus de 15 ans d'expérience en gouvernance de la sécurité numérique et développement des politiques.",
+            "media": {
+                "videos": [
+                    {
+                        "title": "Documentaire: Les 10 Commandements",
+                        "description": "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques — Développement National Durable de la Cybersécurité",
+                        "duration": "Documentaire"
+                    }
+                ]
+            }
+        },
+        "event4": {
+            "title": "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
+            "subtitle": "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques",
+            "description": "Rejoignez le Dr Albert Antwi-Boasiako pour le lancement de l'édition française de son ouvrage fondamental.",
+            "longDescription": "Cet événement exclusif au Maroc célèbre la traduction française des '10 Commandements pour un Développement National Durable de la Cybersécurité'. Une occasion unique d'aborder les défis et opportunités de la cybersécurité dans le contexte africain francophone.",
+            "location": "Maroc",
+            "address": "Maroc",
+            "speaker": "Dr Antwi-Boasiako",
+            "speakerTitle": "Auteur, Expert en Cybersécurité",
+            "speakerBio": "Dirigeant les initiatives de cybersécurité du Ghana avec plus de 15 ans d'expérience.",
+            "media": {
+                "videos": [
+                    {
+                        "title": "Documentaire: Les 10 Commandements",
+                        "description": "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques — Développement National Durable de la Cybersécurité",
+                        "duration": "Documentaire"
+                    }
+                ]
+            }
+        }
+    },
+    "quotes": {
+        "transforming": "Transformer l'éducation en cybersécurité à travers l'Afrique grâce à la recherche innovante et à la mise en œuvre pratique",
+        "building": "Construire la prochaine génération de professionnels de la cybersécurité avec des connaissances et des compétences de pointe",
+        "pioneering": "Pionnier des solutions de sécurité numérique pour un monde plus sûr et plus connecté"
+    },
+    "eventDetail": {
+        "backToEvents": "Retour aux Événements",
+        "eventDescription": "Description de l'Événement",
+        "date": "Date",
+        "venue": "Lieu", 
+        "attendance": "Participation",
+        "professionals": "Professionnels",
+        "registerAttendance": "S'inscrire",
+        "share": "Partager",
+        "export": "Exporter",
+        "detailedHighlights": "Points Forts Détaillés",
+        "keyFocusAreas": "Domaines d'Intérêt Clés",
+        "scheduleOfProceedings": "Programme des Délibérations",
+        "distinguishedSpeakers": "Conférenciers Distingués",
+        "eventFootage": "Images de l'Événement",
+        "documentation": "Documentation",
+        "audioArchive": "Archive Audio", 
+        "photoCollection": "Collection de Photos",
+        "exploreArchive": "Explorer l'Archive — {{count}} Planches",
+        "ghanaCybersecurityEvolution": "L'évolution de la cybersécurité du Ghana",
+        "digitalTransformationAfrica": "La transformation numérique en Afrique",
+        "bestPracticesNationalSecurity": "Meilleures pratiques pour la sécurité nationale",
+        "collaborativeApproachesCyberDefense": "Approches collaboratives de défense cyber",
+        "futureTrendsTechnologies": "Tendances et technologies futures"
+    },
+    "authorData": {
+        "name": "Dr. Albert Antwi-Boasiako",
+        "title": "PRÉSIDENT EXÉCUTIF, BÉNIN E-CRIME BUREAU | EXPERT EN CYBERSÉCURITÉ ET AUTEUR | ANCIEN DIRECTEUR GÉNÉRAL DE LA CYBER SECURITY AUTHORITY DU GHANA (CSA)",
+        "bio": [
+            "Pendant environ 15 ans, le Dr. Albert Antwi-Boasiako a dirigé le développement de la cybersécurité à travers l'Afrique dans les secteurs privé et public. En 2011, il a fondé l'e-Crime Bureau au Ghana, la première entreprise de cybersécurité et d'informatique légale en Afrique de l'Ouest dotée d'un laboratoire dédié, aidant les forces de l'ordre dans les enquêtes et les poursuites liées à la cybercriminalité. Son travail au sein du Bureau a conduit à des engagements à travers l'Afrique, notamment au Kenya, en Ouganda, en Afrique du Sud, au Maroc, au Sénégal, au Nigeria et au Ghana. Ses efforts dans le secteur privé ont également impliqué des organisations internationales telles que l'ONUDC, la CNUCED, l'UE, le Secrétariat du Commonwealth, GCIG/Chatham House et le GIABA. Il a siégé en tant qu'expert au projet GLACY+ du Conseil de l'Europe avant de devenir Coordonnateur national du Ghana pour ce même programme.",
+            "De juillet 2017 à septembre 2021, le Dr. Antwi-Boasiako a occupé le poste de conseiller national en cybersécurité du Ghana et chef du Centre national de cybersécurité (créé en 2018), menant le développement de la cybersécurité de 32,6 % en 2017 à 99,27 % en 2024 et classant ainsi le pays comme un modèle de niveau 1 selon l'Indice mondial de cybersécurité de l'UIT. En octobre 2021, le Dr. Antwi-Boasiako est devenu le premier directeur général de la Cyber Security Authority (CSA), poste qu'il a occupé jusqu'en mars 2025. Il a dirigé l'adoption de la loi ghanéenne sur la cybersécurité, 2020 (Loi 1038), et l'adoption d'une nouvelle politique et stratégie nationale de cybersécurité en 2024.",
+            "Le Dr. Antwi-Boasiako a dirigé les efforts techniques du Ghana pour la ratification de la Convention de Budapest et de la Convention de Malabo sur la cybersécurité. Il a également dirigé les négociations pour la Convention des Nations Unies contre la cybercriminalité, adoptée en août 2024. Il a mené à bien de nombreuses initiatives de cybersécurité, notamment la protection des infrastructures d'information critiques (IIC), l'octroi de licences aux fournisseurs de cybersécurité et les campagnes de sensibilisation destinées aux enfants, au public, aux entreprises et au gouvernement. Ces efforts ont fait du Ghana un leader régional en matière de cybersécurité, reconnu par des études indépendantes et des partenaires de développement.",
+            "Le Dr. Antwi-Boasiako a achevé ses études de doctorat à l'Université de Pretoria en Afrique du Sud, où il a présenté le Modèle harmonisé d'évaluation de la recevabilité des preuves numériques (HM-DEAA) comme contribution révolutionnaire à la standardisation de l'investigation numérique. Le Dr. Antwi-Boasiako a obtenu son diplôme de premier cycle à l'Université de Trente en Italie et son diplôme de troisième cycle à l'Université de Portsmouth au Royaume-Uni, recevant respectivement les mentions cum laude et distinction.",
+            "Le Dr. Antwi-Boasiako est intervenu lors de plus de 100 conférences, ateliers et forums nationaux et internationaux. Il a animé des programmes de formation et de renforcement des capacités à travers l'Afrique, l'Asie, l'Europe, l'Amérique latine et le Pacifique. Il a collaboré avec des organisations telles que la Banque mondiale, le Forum économique mondial, l'UIT, le GFCE, l'ONU, l'UNICEF, la SGI et la Freedom Online Coalition sur les questions de cybersécurité. Ses rôles antérieurs incluent sa participation au Comité consultatif indépendant du GIFCT, en tant que membre du bureau du Comité de la Convention sur la cybercriminalité (T-CY) du Conseil de l'Europe, et en tant que membre de la Coalition mondiale pour la sécurité numérique du WEF.",
+            "Le Dr. Antwi-Boasiako est un bâtisseur d'institutions accompli – ayant fondé l'e-Crime Bureau (secteur privé), créé la Cyber Security Authority du Ghana (secteur public) et officié en tant que Président fondateur de l'African Network of Cybersecurity Authorities (ANCA). Il occupe actuellement le poste de Président exécutif de l'e-Crime Bureau, pilotant les activités de l'entreprise sur le marché africain. Il dispense des cours dans plusieurs institutions, dont le KAIPTC, l'Université Métropolitaine d'Accra, le KNUST, le GIMPA et l'UNICRI. Il a publié des travaux sur l'informatique, la cybersécurité, la cybercriminalité, la protection des données et l'investigation numérique.",
+            "Le Dr. Albert est l'auteur de \"Les 10 Commandements pour le développement durable de la cybersécurité nationale – L'Afrique en contexte : Leçons pratiques et bonnes pratiques\", qui explore les principes clés pour un développement durable de la cybersécurité nationale en Afrique, en s'appuyant sur les initiatives de cybersécurité du Ghana de 2016 à 2024, ainsi que sur les pratiques comparatives d'autres juridictions, et de \"La République ; un parcours professionnel. La cybersécurité du Ghana et la construction d'un pays modèle\", qui retrace près de 15 années d'évolution de la cybersécurité au Ghana et de réformes institutionnelles. Il combine réflexions personnelles, perspectives politiques et analyses stratégiques.",
+            "Le Dr. Antwi-Boasiako a également fondé la Fondation Education for Development (E4D), une organisation non gouvernementale à but non lucratif créée pour soutenir l'éducation des personnes défavorisées au Ghana. La création de la Fondation E4D repose sur ce que Platon, un ancien philosophe grec, a justement indiqué dans sa République : « La direction dans laquelle l'éducation lance un homme déterminera son avenir dans la vie ». La Fondation a été créée spécifiquement pour soutenir ce parcours et permettre aux plus démunis de changer le récit de leur vie."
+        ]
+    },
+    "galleryTranslations": {
+        "1": {
+            "title": "Séances Dédicaces : La République",
+            "category": "Séances de Dédicace",
+            "date": "Janvier 2026",
+            "description": "Un recueil de moments intimes des séances de signature livre pour 'La République : Un Parcours Professionnel, La Cybersécurité au Ghana & La Création d'un Pays Modèle'. Le Dr. Antwi-Boasiako a personnellement dédicacé des exemplaires pour des dignitaires, des responsables gouvernementaux et des invités de marque."
+        },
+        "2": {
+            "title": "Lancement du Livre : La République",
+            "category": "Lancement de Livre",
+            "date": "Novembre 2025",
+            "description": "Images de l'événement de lancement officiel de 'La République : Un Parcours Professionnel, La Cybersécurité au Ghana & La Création d'un Pays Modèle' qui s'est tenu au British Council, Liberia Road, Accra le 25 Novembre 2025."
+        },
+        "3": {
+            "title": "Sommet des Actifs Numériques en Afrique (DASA '25)",
+            "category": "Conférence",
+            "date": "Septembre 2025",
+            "description": "Le Dr. Albert Antwi-Boasiako s'exprimant lors du Sommet des Actifs Numériques en Afrique (DASA '25) — un événement majeur réunissant décideurs politiques, leaders de l'industrie et innovateurs afin d'explorer l'avenir des actifs numériques et de la technologie blockchain en Afrique, organisé au Centre d'Excellence Ghana-Inde Kofi Annan en TIC (GI-KACE), Accra."
+        },
+        "4": {
+            "title": "Séances Dédicaces : Les 10 Commandements pour Un Développement National Durable de la Cybersécurité",
+            "category": "Séances de Dédicace",
+            "date": "Novembre 2024",
+            "description": "Le Dr. Antwi-Boasiako dédicaçant personnellement des exemplaires de 'Les 10 Commandements pour un Développement National Durable de la Cybersécurité' pour les ambassadeurs et invités de marque à la suite du lancement du livre au British Council, Liberia Road, Accra."
+        },
+        "5": {
+            "title": "Lancement du Livre : Les 10 Commandements pour Un Développement National Durable de la Cybersécurité",
+            "category": "Lancement de Livre",
+            "date": "Novembre 2024",
+            "description": "Scènes du lancement officiel de 'Les 10 Commandements pour un Développement National Durable de la Cybersécurité — L'Afrique en Contexte : Leçons Pratiques et Bonnes Pratiques' au British Council, Liberia Road, Accra le 28 Novembre 2024."
+        },
+        "6": {
+            "title": "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
+            "category": "Lancement de Livre",
+            "date": "Février 2025",
+            "description": "Lancement de l'édition française de '10 Commandements pour un Développement National Durable de la Cybersécurité — L'Afrique en Contexte : Leçons Pratiques et Bonnes Pratiques' à Marrakech, Maroc."
+        }
     }
 }

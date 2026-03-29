@@ -18,64 +18,62 @@ export default function EventsPage() {
   const events = [
     {
       id: 1,
-      title: "Book Launch: The Republic",
-      subtitle: "A Professional Journey, Ghana's Cybersecurity & the Making of a Role Model Country",
-      description: "Join Dr. Antwi-Boasiako for the official launch of his latest book 'The Republic'. This landmark publication explores Ghana's cybersecurity evolution and the nation's journey toward becoming a global cybersecurity role model.",
+      titleKey: 'eventsData.event1.title',
+      subtitleKey: 'eventsData.event1.subtitle',
+      descriptionKey: 'eventsData.event1.description',
       date: "November 25, 2025",
       time: "05:00 PM",
-      location: "British Council, Liberia Road, Accra",
+      locationKey: 'eventsData.event1.location',
       type: "past",
       category: "launch",
       image: "/image/events/book_launch_original.jpeg",
       attendees: 200,
-      speaker: "Dr. Antwi-Boasiako",
+      speakerKey: 'eventsData.event1.speaker',
       registrationLink: "#register"
     },
     {
       id: 2,
-      title: "Digital Assets Summit Africa (DASA '25)",
-      subtitle: "Unlocking Africa's Digital Economy Through Innovation & Regulation",
-      description: "Dr. Albert Antwi-Boasiako, a leading voice in cybersecurity, will be speaking at the Digital Assets Summit Africa (DASA '25). This premier event brings together policymakers, industry leaders, and innovators to explore the future of digital assets and blockchain technology in Africa.",
+      titleKey: 'eventsData.event2.title',
+      subtitleKey: 'eventsData.event2.subtitle',
+      descriptionKey: 'eventsData.event2.description',
       date: "29 - 30 September, 2025",
       time: "06:00 PM",
-      location: "Ghana-India Kofi Annan Centre of Excellence in ICT (GI-KACE), Accra",
+      locationKey: 'eventsData.event2.location',
       type: "past",
       category: "author",
       image: "/image/events/dasa25.jpeg",
       attendees: 50,
-      speaker: "Dr. Antwi-Boasiako",
+      speakerKey: 'eventsData.event2.speaker',
       registrationLink: "#register"
     },
-
-        {
+    {
       id: 3,
-      title: "The 10 Commandments for Sustainable National Cybersecurity Development",
-      subtitle: "Africa in Context: Practical Lessons & Good Practices",
-      description: "",
+      titleKey: 'eventsData.event3.title',
+      subtitleKey: 'eventsData.event3.subtitle',
+      descriptionKey: 'eventsData.event3.description',
       date: "2024-11-28",
       time: "09:00 AM",
-      location: "British Council, Liberia Road, Accra",
+      locationKey: 'eventsData.event3.location',
       type: "past",
       category: "launch",
       image: "/image/events/book_launch_english.jpeg",
       attendees: 75,
-      speaker: "Dr. Antwi-Boasiako",
+      speakerKey: 'eventsData.event3.speaker',
       registrationLink: null
     },
-
     {
       id: 4,
-      title: "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
-      subtitle: "L'Afrique en Contexte: Leçons Pratiques et Bonnes Pratiques",
-      description: "",
+      titleKey: 'eventsData.event4.title',
+      subtitleKey: 'eventsData.event4.subtitle',
+      descriptionKey: 'eventsData.event4.description',
       date: "2024-02-04",
       time: "10:30 AM",
-      location: "Morroco",
+      locationKey: 'eventsData.event4.location',
       type: "past",
       category: "author",
       image: "/image/book_launch_french_flyer.jpeg",
       attendees: 75,
-      speaker: "Dr. Antwi-Boasiako",
+      speakerKey: 'eventsData.event4.speaker',
       registrationLink: null
     }
   ];
@@ -163,7 +161,7 @@ export default function EventsPage() {
               <div key={event.id} className="bg-transparent p-6 md:p-8 border border-gray-200 hover:border-gray-300 transition-colors duration-500 flex flex-col h-full group">
                 <div className="relative h-56 md:h-64 bg-gray-50 mb-8 overflow-hidden">
                   {event.image ? (
-                    <Image src={event.image} alt={event.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <Image src={event.image} alt={t(event.titleKey)} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <FiCalendar className="w-12 h-12 text-gray-400" />
@@ -182,9 +180,9 @@ export default function EventsPage() {
                   <div className="mb-4">
                     <span className="font-inter text-xs tracking-widest text-amber-800 uppercase">{event.category}</span>
                   </div>
-                  <h3 className="font-playfair text-2xl font-normal text-gray-900 mb-3 group-hover:text-amber-800 transition-colors duration-300">{event.title}</h3>
-                  <p className="font-merriweather text-sm text-gray-600 italic mb-5">{event.subtitle}</p>
-                  <p className="font-inter text-sm text-gray-600 font-light mb-8 line-clamp-3 leading-relaxed">{event.description}</p>
+                  <h3 className="font-playfair text-2xl font-normal text-gray-900 mb-3 group-hover:text-amber-800 transition-colors duration-300">{t(event.titleKey)}</h3>
+                  <p className="font-merriweather text-sm text-gray-600 italic mb-5">{t(event.subtitleKey)}</p>
+                  <p className="font-inter text-sm text-gray-600 font-light mb-8 line-clamp-3 leading-relaxed">{t(event.descriptionKey)}</p>
 
                   <div className="space-y-3 mb-8 mt-auto border-t border-gray-100 pt-6">
                     <div className="flex items-center text-sm text-gray-600 font-light tracking-wide">
@@ -194,7 +192,7 @@ export default function EventsPage() {
                       <FiClock className="w-4 h-4 mr-3 text-amber-800" />{event.time}
                     </div>
                     <div className="flex items-center text-sm text-gray-600 font-light tracking-wide">
-                      <FiMapPin className="w-4 h-4 mr-3 text-amber-800" />{event.location}
+                      <FiMapPin className="w-4 h-4 mr-3 text-amber-800" />{t(event.locationKey)}
                     </div>
                     <div className="flex items-center text-sm text-gray-600 font-light tracking-wide">
                       <FiUsers className="w-4 h-4 mr-3 text-amber-800" />{event.attendees} {t('events.attendees')}

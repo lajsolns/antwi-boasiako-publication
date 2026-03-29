@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import en from '@/locales/en.json';
 import fr from '@/locales/fr.json';
 
+// Cache bust for JSON updates
 const locales = { en, fr };
 
 const LanguageContext = createContext({
@@ -31,8 +32,11 @@ export function LanguageProvider({ children }) {
 
     // Dot-notation key resolver: t('cart.title') → "Your Selection"
     // Also supports array values: t('shippingPolicy.standardOrders') → ["...", "..."]
+    // Added support for array indices: t('eventsData.event1.agenda[1].title')
     const t = useCallback((key, vars = {}) => {
-        const keys = key.split('.');
+        // Normalize array indices into dot notation e.g., "agenda[1]" -> "agenda.1"
+        const normalizedKey = key.replace(/\[(\d+)\]/g, '.$1');
+        const keys = normalizedKey.split('.');
         let value = locales[locale];
         for (const k of keys) {
             if (value === undefined) return key;

@@ -18,12 +18,12 @@ export default function AllBooksPage() {
   const books = [
     {
       id: 1,
-      title: "The Republic",
-      subtitle: "A Professional Journey, Ghana's Cybersecurity & The Making of a Role Model Country",
+      title: t('allBooks.books.book1.title'),
+      subtitle: t('allBooks.books.book1.subtitle'),
       author: "Dr. Antwi-Boasiako",
       internationalPrice: "35.00",
       ghanaPrice: "350",
-      description: "THE REPUBLIC offers a rare, behind-the-scenes look at Ghana’s cybersecurity development — from the early formative days to a decade of global recognition. Through vivid storytelling and authentic documentation, it traces how a shared national vision, led by committed individuals across government, public service, industry, and international partnerships, built one of Africa’s most respected cybersecurity ecosystems.",
+      description: t('allBooks.books.book1.description'),
       category: 'cybersecurity',
       coverImage: '/image/books/the_republic.png',
       isbn10: "9988406827",
@@ -33,11 +33,11 @@ export default function AllBooksPage() {
     },
     {
       id: 2,
-      title: "The 10 Commandments for Sustainable National Cybersecurity Development",
+      title: t('allBooks.books.book2.title'),
       author: "Dr. Antwi-Boasiako",
       internationalPrice: "55.00",
       ghanaPrice: "500",
-      description: "In this book Dr Albert Antwi-Boasiako provides perspectives and pointers into cybersecurity development at the national level, focusing on the African continent. He draws insights, invaluable lessons and good practices from more than a decade of work on the African continent and engagement in cybersecurity activities around the world.",
+      description: t('allBooks.books.book2.description'),
       category: 'cybersecurity',
       coverImage: '/image/book_mockup_english.png',
       isbn10: "9988392818",
@@ -47,11 +47,11 @@ export default function AllBooksPage() {
     },
     {
       id: 3,
-      title: "Les 10 Commandements pour un Développement Nationale Durable de la Cybersécurité",
+      title: t('allBooks.books.book3.title'),
       author: "Dr. Antwi-Boasiako",
       internationalPrice: "55.00",
       ghanaPrice: "500",
-      description: "Dans ce livre, Dr Albert Antwi-Boasiako fournit des perspectives et des indications sur le développement de la cybersécurité au niveau national, en se concentrant sur le contexte africain.",
+      description: t('allBooks.books.book3.description'),
       category: 'digital-transformation',
       coverImage: '/image/book_mockup_french.png',
       isbn10: "9988399316",
@@ -62,9 +62,9 @@ export default function AllBooksPage() {
   ];
 
   const rotatingQuotes = [
-    { text: '"Transforming cybersecurity education across Africa through innovative research and practical implementation"', link: '#new-releases' },
-    { text: '"Building the next generation of cybersecurity professionals with cutting-edge knowledge and skills"', link: '#categories' },
-    { text: '"Pioneering digital security solutions for a safer, more connected world"', link: '#events' }
+    { text: t('allBooks.rotatingQuotes[0].text'), link: t('allBooks.rotatingQuotes[0].link') },
+    { text: t('allBooks.rotatingQuotes[1].text'), link: t('allBooks.rotatingQuotes[1].link') },
+    { text: t('allBooks.rotatingQuotes[2].text'), link: t('allBooks.rotatingQuotes[2].link') }
   ];
 
   useEffect(() => {

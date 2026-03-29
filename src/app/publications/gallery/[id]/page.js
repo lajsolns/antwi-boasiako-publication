@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
 import { notFound } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import PublicationsHeader from '@/components/PublicationsHeader';
@@ -329,6 +330,7 @@ export default function GalleryDetailPage({ params }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
     const [scrolled, setScrolled] = useState(false);
+    const { t } = useLanguage();
 
     // Lightbox state
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -390,9 +392,9 @@ export default function GalleryDetailPage({ params }) {
     }
 
     const rotatingQuotes = [
-        { text: `"Sharing the intellectual works of Dr Albert Antwi-Boasiako"`, link: '/publications' },
-        { text: `"Independent publishing distinctive voices from Africa"`, link: '/publications' },
-        { text: `"Celebrating excellence in cybersecurity literature"`, link: '/publications' }
+        { text: t('gallery.quote1'), link: '/publications' },
+        { text: t('gallery.quote2'), link: '/publications' },
+        { text: t('gallery.quote3'), link: '/publications' }
     ];
 
     return (
@@ -414,7 +416,7 @@ export default function GalleryDetailPage({ params }) {
                         className="inline-flex items-center text-gray-500 hover:text-amber-800 transition-colors font-inter text-xs tracking-widest uppercase"
                     >
                         <FiArrowLeft className="mr-2" />
-                        Back to Gallery
+                        {t('gallery.backToGallery')}
                     </Link>
                 </div>
             </div>
@@ -428,14 +430,14 @@ export default function GalleryDetailPage({ params }) {
                     {/* Event Header Section */}
                     <div className="text-center mb-16 space-y-4">
                         <span className="inline-block font-inter text-xs tracking-[0.2em] text-amber-800 uppercase">
-                            {eventDetails.category} • {eventDetails.date}
+                            {t(`galleryTranslations.${eventId}.category`)} • {t(`galleryTranslations.${eventId}.date`)}
                         </span>
                         <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6 tracking-tight">
-                            {eventDetails.title}
+                            {t(`galleryTranslations.${eventId}.title`)}
                         </h1>
                         <div className="w-16 h-[1px] bg-amber-800 mx-auto mt-6 mb-8"></div>
                         <p className="font-inter text-lg text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
-                            {eventDetails.description}
+                            {t(`galleryTranslations.${eventId}.description`)}
                         </p>
                     </div>
 
@@ -452,7 +454,7 @@ export default function GalleryDetailPage({ params }) {
                             <div className="mb-16">
                                 <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-6 flex items-center">
                                     <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                                    Event Footage
+                                    {t('gallery.eventFootage')}
                                     <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                                 </h3>
                                 <div className="relative w-full aspect-video border border-gray-200 shadow-sm bg-gray-900">
@@ -471,7 +473,7 @@ export default function GalleryDetailPage({ params }) {
                         {/* Image Grid Section */}
                         <h3 className="font-inter text-xs tracking-[0.2em] text-gray-400 uppercase mb-8 flex items-center">
                             <span className="w-8 h-[1px] bg-gray-200 mr-4"></span>
-                            Photo Gallery
+                            {t('gallery.photoGallery')}
                             <span className="flex-grow h-[1px] bg-gray-100 ml-4"></span>
                         </h3>
 
@@ -485,7 +487,7 @@ export default function GalleryDetailPage({ params }) {
                                 >
                                     <Image
                                         src={src}
-                                        alt={`${eventDetails.title} featured image`}
+                                        alt={`${t(`galleryTranslations.${eventId}.title`)} featured image`}
                                         fill
                                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                                         sizes="(max-width: 1024px) 100vw, 1000px"
@@ -493,7 +495,7 @@ export default function GalleryDetailPage({ params }) {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-1000 flex items-center justify-center opacity-0 group-hover:opacity-100">
                                         <span className="bg-white/90 backdrop-blur-sm px-6 py-3 font-inter text-xs tracking-widest uppercase text-gray-900 border border-gray-100">
-                                            View Full Screen
+                                            {t('gallery.viewFullScreen')}
                                         </span>
                                     </div>
                                 </div>
@@ -509,14 +511,14 @@ export default function GalleryDetailPage({ params }) {
                                     >
                                         <Image
                                             src={src}
-                                            alt={`${eventDetails.title} image ${index + 2}`}
+                                            alt={`${t(`galleryTranslations.${eventId}.title`)} image ${index + 2}`}
                                             fill
                                             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 hover:scale-105"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-1000 flex items-center justify-center opacity-0 group-hover:opacity-100">
                                             <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-inter text-[10px] tracking-widest uppercase text-gray-900 border border-gray-100">
-                                                Zoom
+                                                {t('gallery.zoom')}
                                             </span>
                                         </div>
                                     </div>
@@ -583,7 +585,7 @@ export default function GalleryDetailPage({ params }) {
                                         <div className="relative w-auto h-auto max-w-[85vw] max-h-[70vh]">
                                             <img
                                                 src={eventDetails.images[currentImageIndex]}
-                                                alt={`${eventDetails.title} slideshow image ${currentImageIndex + 1}`}
+                                                alt={`${t(`galleryTranslations.${eventId}.title`)} slideshow image ${currentImageIndex + 1}`}
                                                 className="block w-auto h-auto max-w-full max-h-[70vh] object-contain shadow-inner"
                                                 loading="eager"
                                             />
@@ -593,7 +595,7 @@ export default function GalleryDetailPage({ params }) {
                                     {/* Minimalist Frame Label */}
                                     <div className="absolute -bottom-10 left-0 right-0 text-center">
                                         <p className="font-playfair text-white text-sm tracking-wide opacity-80 italic">
-                                            {eventDetails.title} — Plate {currentImageIndex + 1}
+                                            {t(`galleryTranslations.${eventId}.title`)} — {t('gallery.plate')} {currentImageIndex + 1}
                                         </p>
                                     </div>
                                 </motion.div>
@@ -603,7 +605,7 @@ export default function GalleryDetailPage({ params }) {
                         {/* Counter */}
                         <div className="absolute bottom-8 right-8 text-right pointer-events-none">
                             <p className="font-inter text-[10px] tracking-[0.4em] text-white/30 uppercase">
-                                Collection Archive: {currentImageIndex + 1} of {eventDetails.images.length}
+                                {t('gallery.collectionArchive')}: {currentImageIndex + 1} of {eventDetails.images.length}
                             </p>
                             <div className="flex justify-end space-x-1.5 mt-2 opacity-20">
                                 {eventDetails.images.map((_, idx) => (

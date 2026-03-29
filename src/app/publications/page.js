@@ -302,42 +302,42 @@ export default function PublicationsPage() {
   const testimonials = [
     {
       id: 1,
-      name: "Dr. Sarah Chen",
-      role: "Chief AI Security Officer, TechCorp Global",
-      content: "The Republic isn't just a book—it's a blueprint for digital sovereignty in the AI era. Dr. Antwi-Boasiako's insights on quantum-resistant cybersecurity frameworks have fundamentally shaped our 2026 security strategy.",
+      name: t('home.testimonials[0].name'),
+      role: t('home.testimonials[0].role'),
+      content: t('home.testimonials[0].content'),
       rating: 5,
       avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-      expertise: "AI Security",
+      expertise: t('home.testimonials[0].expertise'),
       year: "2026"
     },
     {
       id: 2,
-      name: "Prof. Marcus Williams",
-      role: "Director, African Digital Policy Institute",
-      content: "In an age of algorithmic governance, this work provides the ethical framework we desperately need. It's become required reading for every policymaker shaping Africa's digital future.",
+      name: t('home.testimonials[1].name'),
+      role: t('home.testimonials[1].role'),
+      content: t('home.testimonials[1].content'),
       rating: 5,
       avatar: "https://randomuser.me/api/portraits/men/44.jpg",
-      expertise: "Digital Policy",
+      expertise: t('home.testimonials[1].expertise'),
       year: "2026"
     },
     {
       id: 3,
-      name: "Amara Okonkwo",
-      role: "Cybersecurity Lead, Pan-African Bank",
-      content: "The 10 Commandments framework has revolutionized how we approach financial cybersecurity in the post-quantum computing landscape. Essential reading for modern fintech leaders.",
+      name: t('home.testimonials[2].name'),
+      role: t('home.testimonials[2].role'),
+      content: t('home.testimonials[2].content'),
       rating: 5,
       avatar: "https://randomuser.me/api/portraits/women/28.jpg",
-      expertise: "FinTech Security",
+      expertise: t('home.testimonials[2].expertise'),
       year: "2025"
     },
     {
       id: 4,
-      name: "Lt. Gen. James Mitchell",
-      role: "Retired, NATO Cyber Command",
-      content: "Dr. Antwi-Boasiako's work bridges the gap between academic theory and battlefield reality. This is the definitive guide for modern cyber defense strategies.",
+      name: t('home.testimonials[3].name'),
+      role: t('home.testimonials[3].role'),
+      content: t('home.testimonials[3].content'),
       rating: 5,
       avatar: "https://randomuser.me/api/portraits/men/67.jpg",
-      expertise: "Defense Security",
+      expertise: t('home.testimonials[3].expertise'),
       year: "2026"
     }
   ];
@@ -375,44 +375,44 @@ export default function PublicationsPage() {
     {
       id: 1,
       color: 'blue',
-      title: "Essential reading for cybersecurity professionals",
-      source: "TechCrunch",
-      description: "Dr. Antwi-Boasiako's \"The Republic\" provides invaluable insights into Ghana's digital transformation journey."
+      title: t('home.features[0].title'),
+      source: t('home.features[0].source'),
+      description: t('home.features[0].description')
     },
     {
       id: 2,
       color: 'green',
-      title: "A groundbreaking approach to cybersecurity governance",
-      source: "Harvard Business Review",
-      description: "The 10 Commandments framework offers practical solutions for national security challenges."
+      title: t('home.features[1].title'),
+      source: t('home.features[1].source'),
+      description: t('home.features[1].description')
     },
     {
       id: 3,
       color: 'purple',
-      title: "Visionary leadership in digital transformation",
-      source: "Forbes Africa",
-      description: "Dr. Albert Antwi-Boasiako shares his expertise on building resilient cybersecurity frameworks."
+      title: t('home.features[2].title'),
+      source: t('home.features[2].source'),
+      description: t('home.features[2].description')
     },
     {
       id: 4,
       color: 'orange',
-      title: "Comprehensive guide to national cybersecurity",
-      source: "BBC Technology",
-      description: "An authoritative resource for policymakers and security professionals worldwide."
+      title: t('home.features[3].title'),
+      source: t('home.features[3].source'),
+      description: t('home.features[3].description')
     },
     {
       id: 5,
       color: 'red',
-      title: "Transformative approach to digital governance",
-      source: "The Guardian",
-      description: "Innovative strategies for building secure digital infrastructure in developing nations."
+      title: t('home.features[4].title'),
+      source: t('home.features[4].source'),
+      description: t('home.features[4].description')
     },
     {
       id: 6,
       color: 'indigo',
-      title: "Leading voice in African cybersecurity",
-      source: "Al Jazeera Technology",
-      description: "Dr. Antwi-Boasiako's work is shaping the future of digital security across the continent."
+      title: t('home.features[5].title'),
+      source: t('home.features[5].source'),
+      description: t('home.features[5].description')
     }
   ];
 
@@ -487,34 +487,34 @@ export default function PublicationsPage() {
   const pastEvents = [
     {
       id: 1,
-      title: "Book Launch: The Republic",
+      titleKey: "eventsData.event1.title",
       date: "November 25, 2025",
-      location: "British Council, Liberia Road, Accra",
-      description: "Join Dr. Antwi-Boasiako for the official launch of his latest book 'The Republic'. This landmark publication explores Ghana's cybersecurity evolution and the nation's journey toward becoming a global cybersecurity role model.",
+      locationKey: "eventsData.event1.location",
+      descriptionKey: "eventsData.event1.description",
       flyer: "/image/events/book_launch_original.jpeg"
     },
     {
       id: 2,
-      title: "Digital Assets Summit Africa (DASA '25)",
+      titleKey: "eventsData.event2.title",
       date: "29 - 30 September, 2025",
-      location: "Ghana-India Kofi Annan Centre of Excellence in ICT (GI-KACE), Accra",
-      description: "Dr. Albert Antwi-Boasiako, a leading voice in cybersecurity, will be speaking at the Digital Assets Summit Africa (DASA '25). This premier event brings together policymakers, industry leaders, and innovators to explore the future of digital assets and blockchain technology in Africa.",
+      locationKey: "eventsData.event2.location",
+      descriptionKey: "eventsData.event2.description",
       flyer: "/image/events/dasa25.jpeg"
     },
     {
       id: 3,
-      title: "The 10 Commandments for Sustainable National Cybersecurity Development",
+      titleKey: "eventsData.event3.title",
       date: "November 28, 2024",
-      location: "British Council, Liberia Road, Accra",
-      description: "Launch of 'The 10 Commandments for Sustainable National Cybersecurity Development'. This landmark publication offers practical lessons and good practices tailored to the African context.",
+      locationKey: "eventsData.event3.location",
+      descriptionKey: "eventsData.event3.description",
       flyer: "/image/events/book_launch_english.jpeg"
     },
     {
       id: 4,
-      title: "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
+      titleKey: "eventsData.event4.title",
       date: "February 04, 2024",
-      location: "Morroco",
-      description: "Lancement de l'édition française de l'ouvrage fondamental : 'Les 10 Commandements pour un Développement National Durable de la Cybersécurité'.",
+      locationKey: "eventsData.event4.location",
+      descriptionKey: "eventsData.event4.description",
       flyer: "/image/book_launch_french_flyer.jpeg"
     }
   ];
@@ -991,7 +991,7 @@ export default function PublicationsPage() {
                     <div className="relative h-48 bg-gray-100">
                       <Image
                         src={event.flyer}
-                        alt={event.title}
+                        alt={t(event.titleKey)}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -1002,7 +1002,7 @@ export default function PublicationsPage() {
                     </div>
                     <div className="p-6">
                       <h3 className="font-merriweather text-lg font-semibold text-gray-900 mb-2">
-                        {event.title}
+                        {t(event.titleKey)}
                       </h3>
                       <div className="space-y-1 mb-3">
                         <div className="flex items-center text-gray-600 text-sm">
@@ -1016,11 +1016,11 @@ export default function PublicationsPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                           </svg>
-                          {event.location}
+                          {t(event.locationKey)}
                         </div>
                       </div>
                       <p className="font-inter text-gray-800 text-sm">
-                        {event.description}
+                        {t(event.descriptionKey)}
                       </p>
                     </div>
                   </Link>
@@ -1035,7 +1035,7 @@ export default function PublicationsPage() {
                   href="/publications/events"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white border border-gray-900 font-inter text-sm tracking-widest uppercase hover:bg-transparent hover:text-gray-900 transition-all duration-300"
                 >
-                  View All Events
+                  {t('home.viewAllEvents')}
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FiShoppingBag, FiShare2, FiExternalLink, FiChevronLeft, FiStar, FiChevronUp } from 'react-icons/fi';
 import { useCart } from '@/context/CartContext';
+import { useLanguage } from '@/context/LanguageContext';
 import PublicationsHeader from '@/components/PublicationsHeader';
 import PublicationsFooter from '@/components/PublicationsFooter';
 import YouMayAlsoLike from '@/components/YouMayAlsoLike';
@@ -39,6 +40,7 @@ export default function BookDetailPage({ params }) {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { addToCart } = useCart();
+  const { t } = useLanguage();
 
   // Unwrap params since it's a Promise in Next.js 15+
   const resolvedParams = React.use(params);
@@ -58,84 +60,75 @@ export default function BookDetailPage({ params }) {
 
   // Rotating quotes
   const rotatingQuotes = [
-    {
-      text: '"Transforming cybersecurity education across Africa through innovative research and practical implementation"',
-      link: '#new-releases'
-    },
-    {
-      text: '"Building the next generation of cybersecurity professionals with cutting-edge knowledge and skills"',
-      link: '#categories'
-    },
-    {
-      text: '"Pioneering digital security solutions for a safer, more connected world"',
-      link: '#events'
-    }
+    { text: t('allBooks.rotatingQuotes[0].text'), link: t('allBooks.rotatingQuotes[0].link') },
+    { text: t('allBooks.rotatingQuotes[1].text'), link: t('allBooks.rotatingQuotes[1].link') },
+    { text: t('allBooks.rotatingQuotes[2].text'), link: t('allBooks.rotatingQuotes[2].link') }
   ];
 
   // Sample book data - in a real app, this would come from an API or database
   const books = {
     1: {
       id: 1,
-      title: "The Republic",
-      subtitle: "A Professional Journey, Ghana's Cybersecurity & The Making of a Role Model Country",
+      title: t('allBooks.books.book1.title'),
+      subtitle: t('allBooks.books.book1.subtitle'),
       author: "Dr. Albert Antwi-Boasiako",
       internationalPrice: "35.00",
       ghanaPrice: "350",
-      description: "THE REPUBLIC offers a rare, behind-the-scenes look at Ghana’s cybersecurity development — from the early formative days to a decade of global recognition. Through vivid storytelling and authentic documentation, it traces how a shared national vision, led by committed individuals across government, public service, industry, and international partnerships, built one of Africa’s most respected cybersecurity ecosystems.",
-      longDescription: "Stories breathe life into every transformation and impact. THE REPUBLIC details the story of how vision, courage, and collaboration shaped a digital future once thought beyond reach. THE REPUBLIC offers a rare, behind-the-scenes look at Ghana’s cybersecurity development — from the early formative days to a decade of global recognition. Through vivid storytelling and authentic documentation, it traces how a shared national vision, led by committed individuals across government, public service, industry, and international partnerships, built one of Africa’s most respected cybersecurity ecosystems. At its heart is the personal journey of the Author — a key architect of this transformation — whose reflections reveal the challenges, opportunities, turning points, and triumphs that defined Ghana’s rise in becoming a tier-1, role model country for the African continent and the Global South. More than a history, THE REPUBLIC is a tribute to leadership that delivers results — leadership grounded in focus, patriotism, and purpose. It is a celebration of key personalities and actors who have contributed to this developmental journey. It is also an invitation to readers, to reimagine what determined citizens and visionary public service can achieve together. For leaders, policymakers, professionals, and anyone who believes in the promise and the possibility of visionary public service, THE REPUBLIC offers both a fascinating history and a blueprint for impact.",
+      description: t('allBooks.books.book1.description'),
+      longDescription: t('allBooks.books.book1.longDescription'),
       category: 'cybersecurity',
       coverImage: '/image/books/the_republic.png',
-      authorBio: "Dr. Albert Antwi-Boasiako is Ghana's foremost cybersecurity expert and Director-General of the Cyber Security Authority. With almost two decades of career experience, he has pioneered national cybersecurity frameworks and positioned Ghana as a leader in African cyber defense.",
+      authorBio: t('allBooks.books.book1.authorBio'),
       isbn10: "9988406827",
       isbn13: "978-9988406820",
       pages: 358,
-      language: "English",
+      language: t('bookDetail.english'),
       published: "24 Nov 2025",
-      format: "Paperback",
+      format: t('bookDetail.paperback'),
       trimSize: "24 x 17 x 24 cm",
       weight: "700g",
       publisher: "Antwi-Boasiako Publications"
     },
     2: {
       id: 2,
-      title: "The 10 Commandments for Sustainable National Cybersecurity Development",
-      subtitle: "A Framework for Building Resilient Cybersecurity Ecosystems",
+      title: t('allBooks.books.book2.title'),
+      subtitle: t('allBooks.books.book2.subtitle'),
       author: "Dr. Albert Antwi-Boasiako",
       internationalPrice: "55.00",
       ghanaPrice: "500",
-      description: "A groundbreaking framework that distills complex cybersecurity governance into ten actionable principles. This comprehensive guide offers governments and organizations a roadmap for building resilient cybersecurity ecosystems. Through real-world case studies and proven methodologies, Dr. Antwi-Boasiako demonstrates how developing nations can establish robust cyber defenses while fostering economic growth and digital innovation.",
-      longDescription: "This seminal work presents a comprehensive framework for national cybersecurity development, distilled into ten fundamental commandments. Each commandment is explored in depth with practical examples, implementation strategies, and real-world case studies from Dr. Antwi-Boasiako's extensive experience working with governments across Africa. The book addresses critical topics including policy development, capacity building, international cooperation, public-private partnerships, and the balance between security and economic growth. It serves as both a strategic guide for policymakers and a practical manual for cybersecurity professionals.",
+      description: t('allBooks.books.book2.description'),
+      longDescription: t('allBooks.books.book2.longDescription'),
       category: 'cybersecurity',
       coverImage: '/image/book_mockup_english.png',
-      authorBio: "Dr. Albert Antwi-Boasiako serves as a consultant to multiple African governments on cybersecurity policy and has been instrumental in shaping regional cyber security cooperation initiatives.",
+      authorBio: t('allBooks.books.book2.authorBio'),
       isbn10: "9988392818",
       isbn13: "978-9988392819",
       pages: 428,
-      language: "English",
+      language: t('bookDetail.english'),
       published: "2024",
-      format: "Paperback",
+      format: t('bookDetail.paperback'),
       trimSize: "24.5 x 18 x 24.5 cm",
       weight: "628g",
       publisher: "Antwi-Boasiako Publications"
     },
     3: {
       id: 3,
-      title: "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité",
-      subtitle: "Strategic Leadership for Organizational Change in the Digital Age",
+      title: t('allBooks.books.book3.title'),
+      subtitle: t('allBooks.books.book3.subtitle'),
       author: "Dr. Antwi-Boasiako",
       internationalPrice: "55.00",
       ghanaPrice: "500",
-      description: "Navigate the complex landscape of organizational digital evolution with this strategic leadership guide. Dr. Antwi-Boasiako combines technical expertise with business acumen to deliver actionable insights for successful digital transformation. From legacy system modernization to cultural change management, this book provides the tools and frameworks needed to lead organizations through the digital revolution.",
-      longDescription: "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité offers a comprehensive approach to navigating the complex landscape of organizational change in the digital era. Dr. Antwi-Boasiako combines his technical expertise in cybersecurity with strategic business insights to provide a holistic framework for digital transformation. The book covers critical topics including legacy system modernization, cloud adoption strategies, cybersecurity in transformation, data governance, and cultural change management. Through detailed case studies and practical frameworks, readers will learn how to develop and implement digital transformation strategies that align with organizational goals while managing risks and maximizing opportunities in the digital age.",
+      description: t('allBooks.books.book3.description'),
+      longDescription: t('allBooks.books.book3.longDescription'),
       category: 'digital-transformation',
       coverImage: '/image/book_mockup_french.png',
-      authorBio: "A recognized thought leader in cybersecurity and digital transformation, Dr. Antwi-Boasiako has helped numerous organizations across Africa successfully navigate their digital journeys.",
+      authorBio: t('allBooks.books.book3.authorBio'),
       isbn10: "9988399316",
       isbn13: "978-99888399313",
       pages: 386,
-      language: "English",
+      language: t('bookDetail.french'),
       published: "2024",
-      format: "Paperback",
+      format: t('bookDetail.paperback'),
       trimSize: "24.5 x 18 x 24.5 cm",
       weight: "628g",
       publisher: "Antwi-Boasiako Publications"
@@ -158,14 +151,14 @@ export default function BookDetailPage({ params }) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-merriweather text-3xl font-bold text-gray-900 mb-4">Book Not Found</h1>
-          <p className="font-inter text-gray-600 mb-8">The book you're looking for doesn't exist.</p>
+          <h1 className="font-merriweather text-3xl font-bold text-gray-900 mb-4">{t('bookDetail.notFoundTitle')}</h1>
+          <p className="font-inter text-gray-600 mb-8">{t('bookDetail.notFoundMessage')}</p>
           <Link
             href="/publications"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-800 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
           >
             <FiChevronLeft className="w-4 h-4" />
-            Back to Publications
+            {t('bookDetail.backToPublications')}
           </Link>
         </div>
       </div>
@@ -244,7 +237,7 @@ export default function BookDetailPage({ params }) {
               </div>
 
               <div className="mb-8">
-                <div className="font-inter text-xs tracking-[0.15em] font-medium text-gray-400 uppercase mb-4">Select Format</div>
+                <div className="font-inter text-xs tracking-[0.15em] font-medium text-gray-400 uppercase mb-4">{t('bookDetail.selectFormat')}</div>
                 <div className="flex gap-4">
                   <button
                     onClick={() => setSelectedFormat('paperback')}
@@ -253,7 +246,7 @@ export default function BookDetailPage({ params }) {
                       : 'bg-transparent text-gray-600 border-gray-300 hover:border-gray-900 hover:text-gray-900'
                       }`}
                   >
-                    Paperback
+                    {t('bookDetail.paperback')}
                   </button>
                   <button
                     onClick={() => setSelectedFormat('ebook')}
@@ -262,13 +255,13 @@ export default function BookDetailPage({ params }) {
                       : 'bg-transparent text-gray-600 border-gray-300 hover:border-gray-900 hover:text-gray-900'
                       }`}
                   >
-                    Ebook
+                    {t('bookDetail.ebook')}
                   </button>
                 </div>
               </div>
 
               <div className="mb-10">
-                <div className="font-inter text-xs tracking-[0.15em] font-medium text-gray-400 uppercase mb-4">Quantity</div>
+                <div className="font-inter text-xs tracking-[0.15em] font-medium text-gray-400 uppercase mb-4">{t('bookDetail.quantity')}</div>
                 <div className="flex items-center border border-gray-300 w-32 transition-colors duration-300 hover:border-gray-500">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -292,7 +285,7 @@ export default function BookDetailPage({ params }) {
                 onClick={handleAddToCart}
                 className="w-full px-8 py-5 bg-gray-900 text-white border border-gray-900 hover:bg-transparent hover:text-gray-900 transition-all duration-300 font-inter text-sm tracking-[0.2em] shadow-lg shadow-gray-900/10 uppercase"
               >
-                Add to Cart
+                {t('bookDetail.addToCart')}
               </button>
             </div>
 
@@ -308,7 +301,7 @@ export default function BookDetailPage({ params }) {
 
             {/* About This Book */}
             <section className="mb-6 mt-12">
-              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-3">Synopsis</h2>
+              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-3">{t('bookDetail.synopsis')}</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="font-inter text-gray-600 font-light leading-relaxed">
                   {book.longDescription}
@@ -318,70 +311,60 @@ export default function BookDetailPage({ params }) {
 
             {/* Praise for this Book */}
             <section className="mb-16">
-              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-8">Recommendations</h2>
+              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-8">{t('bookDetail.recommendations')}</h2>
               <div className="space-y-8">
-                <div className="border-l-[1px] border-amber-800 pl-6">
-                  <p className="font-merriweather text-gray-600 italic leading-relaxed">
-                    "Dr. Antwi-Boasiako's work has become essential reading for our cybersecurity program. The Republic provides unparalleled insights into Ghana's digital security evolution."
-                  </p>
-                  <p className="font-inter text-xs tracking-widest uppercase text-gray-400 mt-4">— Prof. Kofi Annan Center, Academic Institution</p>
-                </div>
-                <div className="border-l-[1px] border-amber-800 pl-6">
-                  <p className="font-merriweather text-gray-600 italic leading-relaxed">
-                    "The 10 Commandments framework transformed how we approach national cybersecurity strategy. Clear, actionable, and based on real-world experience."
-                  </p>
-                  <p className="font-inter text-xs tracking-widest uppercase text-gray-400 mt-4">— Sarah Johnson, Cybersecurity Analyst</p>
-                </div>
-                <div className="border-l-[1px] border-amber-800 pl-6">
-                  <p className="font-merriweather text-gray-600 italic leading-relaxed">
-                    "Les 10 Commandements Pour Un Développement Nationale Durable De La Cybersécurité is the most comprehensive guide I've found for leading organizational change. Dr. Antwi-Boasiako's expertise shines through every chapter."
-                  </p>
-                  <p className="font-inter text-xs tracking-widest uppercase text-gray-400 mt-4">— Michael Chen, Digital Transformation Consultant</p>
-                </div>
+                {[0, 1, 2].map((index) => (
+                  <div key={index} className="border-l-[1px] border-amber-800 pl-6">
+                    <p className="font-merriweather text-gray-600 italic leading-relaxed">
+                      {t(`recommendations[${index}].quote`)}
+                    </p>
+                    <p className="font-inter text-xs tracking-widest uppercase text-gray-400 mt-4">— {t(`recommendations[${index}].source`)}</p>
+                  </div>
+                ))}
               </div>
             </section>
 
             {/* Product Details */}
             <section className="mb-16">
-              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-8">Product Details</h2>
+              <h2 className="font-playfair text-2xl font-normal text-gray-900 mb-8">{t('bookDetail.productDetails')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
                 <div className="space-y-0">
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">ISBN-10:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.isbn10')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.isbn10}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">ISBN-13:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.isbn13')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.isbn13}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Pages:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.pages')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.pages}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Language:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.language')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.language}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Published:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.published')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.published}</span>
                   </div>
                 </div>
                 <div className="space-y-0">
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Format:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.formatLabel')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.format}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Trim Size:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.trimSize')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.trimSize}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Weight:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.weight')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.weight}</span>
                   </div>
                   <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="font-inter text-sm font-light text-gray-500">Publisher:</span>
+                    <span className="font-inter text-sm font-light text-gray-500">{t('bookDetail.publisher')}:</span>
                     <span className="font-inter text-sm text-gray-900">{book.publisher}</span>
                   </div>
                 </div>
